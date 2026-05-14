@@ -1,0 +1,168 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Google Fonts CSS variables (set by next/font in layout.tsx) ─────────── */
+/* font-display: 'Cormorant Garamond' → var(--font-cormorant)               */
+/* font-body:    'DM Sans'            → var(--font-dm-sans)                 */
+
+@layer base {
+  /* Default all text to brand-dark on brand-white background */
+  html {
+    @apply bg-brand-white text-brand-dark font-body scroll-smooth;
+  }
+
+  /* Headings use display serif for luxury feel */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+
+  /* Remove default blue link colour */
+  a { @apply text-inherit; }
+
+  /* Smooth image rendering */
+  img { @apply max-w-full; }
+}
+
+@layer components {
+  /* ── Buttons ─────────────────────────────────────────────────────────── */
+
+  /* Primary CTA — rose fill, white text, subtle shadow */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2
+           bg-brand-rose text-white font-body font-medium
+           px-6 py-3 rounded-full text-sm tracking-wide
+           transition-all duration-200
+           hover:bg-brand-rose-light hover:shadow-rose
+           active:bg-brand-rose-dark active:scale-[0.98]
+           disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  /* Outline button — rose border, transparent fill */
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2
+           border border-brand-rose text-brand-rose font-body font-medium
+           px-6 py-3 rounded-full text-sm tracking-wide
+           transition-all duration-200
+           hover:bg-brand-rose hover:text-white
+           active:bg-brand-rose-dark active:border-brand-rose-dark active:text-white
+           disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  /* Ghost button — text only with hover underline */
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-1
+           text-brand-rose font-body font-medium text-sm
+           transition-all duration-200
+           hover:text-brand-rose-dark hover:underline underline-offset-2
+           active:text-brand-rose-dark;
+  }
+
+  /* ── Form elements ───────────────────────────────────────────────────── */
+
+  /* Light styled input with soft rose focus ring */
+  .input {
+    @apply w-full bg-white border border-brand-beige text-brand-dark
+           rounded-lg px-4 py-2.5 text-sm font-body
+           placeholder:text-brand-muted
+           transition-all duration-150
+           focus:outline-none focus:border-brand-rose focus:ring-2 focus:ring-brand-rose/20;
+  }
+
+  /* Small uppercase label with tracking */
+  .label {
+    @apply block text-xs uppercase tracking-widest text-brand-muted font-body font-medium mb-1.5;
+  }
+
+  /* ── Cards ───────────────────────────────────────────────────────────── */
+
+  /* Base card — cream background, beige border */
+  .card {
+    @apply bg-brand-cream border border-brand-beige rounded-2xl overflow-hidden shadow-card;
+  }
+
+  /* Card with hover lift and subtle rose border tint */
+  .card-hover {
+    @apply card transition-all duration-300
+           hover:shadow-card-hover hover:border-brand-rose/30 hover:-translate-y-1;
+  }
+
+  /* ── Layout helpers ──────────────────────────────────────────────────── */
+
+  /* Max-width centred container with responsive horizontal padding */
+  .container-site {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Consistent vertical section spacing */
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+
+  /* Small uppercase eyebrow label with decorative left line */
+  .section-tag {
+    @apply inline-flex items-center gap-2 text-xs uppercase tracking-widest
+           text-brand-rose font-body font-semibold mb-3;
+  }
+
+  .section-tag::before {
+    content: '';
+    @apply block w-6 h-px bg-brand-rose;
+  }
+
+  /* ── Typography ──────────────────────────────────────────────────────── */
+
+  /* Rich HTML blog post content styles */
+  .prose-article {
+    @apply text-brand-dark font-body leading-relaxed;
+  }
+
+  .prose-article h2 {
+    @apply font-display text-2xl md:text-3xl text-brand-dark mt-10 mb-4;
+  }
+
+  .prose-article h3 {
+    @apply font-display text-xl text-brand-dark mt-8 mb-3;
+  }
+
+  .prose-article p {
+    @apply mb-5 text-brand-dark/90 leading-7;
+  }
+
+  .prose-article ul {
+    @apply list-disc list-inside mb-5 space-y-1.5 text-brand-dark/90;
+  }
+
+  .prose-article strong {
+    @apply font-semibold text-brand-dark;
+  }
+
+  /* ── Badges ──────────────────────────────────────────────────────────── */
+
+  /* "New" badge — soft rose pill */
+  .badge-new {
+    @apply inline-block bg-brand-rose/10 text-brand-rose
+           text-[10px] uppercase tracking-wider font-semibold
+           px-2.5 py-0.5 rounded-full;
+  }
+
+  /* "Sale" badge — soft green pill */
+  .badge-sale {
+    @apply inline-block bg-brand-green/10 text-brand-green
+           text-[10px] uppercase tracking-wider font-semibold
+           px-2.5 py-0.5 rounded-full;
+  }
+
+  /* "Clean Beauty" tag in green — used on product cards */
+  .badge-clean {
+    @apply inline-block bg-brand-green/10 text-brand-green
+           text-[10px] uppercase tracking-wider font-semibold
+           px-2.5 py-0.5 rounded-full border border-brand-green/20;
+  }
+}
+
+/* ── Custom scrollbar (webkit) ────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { @apply bg-brand-beige rounded-full; }
+::-webkit-scrollbar-thumb:hover { @apply bg-brand-muted; }
