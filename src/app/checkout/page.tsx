@@ -5,6 +5,7 @@ import { useAuth } from '@/context/AuthContext'
 import { formatPrice, getShippingFee, KENYA_COUNTIES } from '@/lib/utils'
 import { Address } from '@/types'
 import toast from 'react-hot-toast'
+import { LuPartyPopper } from 'react-icons/lu'
 import { useRouter } from 'next/navigation'
 
 export default function CheckoutPage() {
@@ -58,7 +59,7 @@ export default function CheckoutPage() {
   if (step === 'confirm') return (
     <div className="section-padding">
       <div className="container-site max-w-lg text-center">
-        <div className="text-6xl mb-5">🎉</div>
+        <LuPartyPopper className="w-16 h-16 mx-auto mb-5 text-brand-rose" aria-hidden />
         <h1 className="font-display text-3xl font-medium text-brand-dark mb-3">Order Placed!</h1>
         <p className="text-brand-muted font-body mb-2">Order ID: <span className="font-mono text-brand-dark font-medium">{orderId}</span></p>
         <p className="text-sm text-brand-muted font-body mb-6">You should receive an M-Pesa prompt shortly. We'll WhatsApp you when your order ships.</p>

@@ -7,6 +7,7 @@ import { useWishlist } from '@/context/WishlistContext'
 import { formatPrice } from '@/lib/utils'
 import { Product } from '@/types'
 import toast from 'react-hot-toast'
+import { LuCheck } from 'react-icons/lu'
 
 interface Props { product: Product }
 
@@ -24,13 +25,13 @@ export default function ProductCard({ product }: Props) {
   function handleAddToCart(e: React.MouseEvent) {
     e.preventDefault()
     addItem(product)
-    toast.success(`Added to cart ✓`)
+    toast.success(`Added to cart`)
   }
 
   function handleWishlist(e: React.MouseEvent) {
     e.preventDefault()
     toggleItem(product)
-    toast.success(inWishlist ? 'Removed from wishlist' : 'Added to wishlist ❤️')
+    toast.success(inWishlist ? 'Removed from wishlist' : 'Added to wishlist')
   }
 
   return (
@@ -58,7 +59,7 @@ export default function ProductCard({ product }: Props) {
           <div className="absolute bottom-0 left-0 right-0 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
             <button onClick={handleAddToCart}
               className={`w-full py-3 text-sm font-body font-medium transition-colors ${inCart ? 'bg-brand-green text-white' : 'bg-brand-dark text-white hover:bg-brand-rose'}`}>
-              {inCart ? '✓ In Cart' : 'Quick Add'}
+              {inCart ? <span className="inline-flex items-center justify-center gap-1.5"><LuCheck className="w-4 h-4" aria-hidden /> In Cart</span> : 'Quick Add'}
             </button>
           </div>
         </div>

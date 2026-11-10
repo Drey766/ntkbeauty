@@ -2,6 +2,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { PRODUCT_CATEGORIES, SKIN_CONCERNS } from '@/lib/utils'
+import { LuSparkle } from 'react-icons/lu'
 import ProductCard from '@/components/shop/ProductCard'
 import { Product } from '@/types'
 
@@ -14,7 +15,7 @@ export function MarqueeBar() {
       <div className="flex animate-marquee whitespace-nowrap">
         {[...BRANDS, ...BRANDS].map((brand, i) => (
           <span key={`brand-${i}`} className="mx-8 text-sm font-display font-medium text-brand-muted tracking-wide">
-            {brand} <span className="mx-4 text-brand-beige">✦</span>
+            {brand} <LuSparkle className="inline-block mx-4 w-3 h-3 text-brand-beige" aria-hidden />
           </span>
         ))}
       </div>
@@ -55,7 +56,7 @@ export function CategoryGrid() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/70 via-brand-dark/10 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-3 text-white">
-                <p className="text-lg">{cat.emoji}</p>
+                <cat.icon className="w-5 h-5 mb-1" aria-hidden />
                 <p className="font-display text-sm font-medium leading-tight">{cat.label}</p>
               </div>
             </Link>
@@ -105,7 +106,7 @@ export function SkinConcernSection() {
           {SKIN_CONCERNS.map(concern => (
             <Link key={concern.slug} href={`/shop?concern=${concern.slug}`}
               className="group card-hover p-5 text-center hover:border-brand-rose/40">
-              <div className="text-3xl mb-3">{concern.icon}</div>
+              <concern.icon className="w-8 h-8 mx-auto mb-3 text-brand-rose" aria-hidden />
               <h3 className="font-body font-semibold text-sm text-brand-dark group-hover:text-brand-rose transition-colors mb-1">{concern.label}</h3>
               <p className="text-xs text-brand-muted font-body leading-snug">{concern.description}</p>
             </Link>
@@ -120,7 +121,7 @@ export function SkinConcernSection() {
 const TESTIMONIALS = [
   { name: 'Amina W.', location: 'Nairobi', text: 'Finally found a store that actually understands Kenyan skin! My hyperpigmentation has improved so much with the serums I found here.', rating: 5 },
   { name: 'Grace K.', location: 'Mombasa', text: 'The WhatsApp consultation was amazing — they recommended exactly what I needed for my oily skin. Fast delivery and genuine products!', rating: 5 },
-  { name: 'Lilian M.', location: 'Kisumu', text: 'Been buying K-beauty products from NT Beauty for 8 months now. The quality is unmatched and M-Pesa payment makes it so easy.', rating: 5 },
+  { name: 'Lilian M.', location: 'Kisumu', text: 'Been buying K-beauty products from NTK Beauty for 8 months now. The quality is unmatched and M-Pesa payment makes it so easy.', rating: 5 },
   { name: 'Faith N.', location: 'Eldoret', text: 'My skin has never looked better. The sunscreen recommendations are perfect for our Kenyan climate.', rating: 5 },
 ]
 
@@ -190,7 +191,7 @@ export function InstagramFeed() {
   return (
     <section className="section-padding bg-brand-white">
       <div className="container-site text-center">
-        <span className="section-tag mx-auto">@ntbeautykenya</span>
+        <span className="section-tag mx-auto">@ntkbeautykenya</span>
         <h2 className="font-display text-3xl font-medium text-brand-dark mb-8">Follow Our Journey</h2>
         <div className="grid grid-cols-3 md:grid-cols-6 gap-2 mb-6">
           {imgs.map((src, i) => (

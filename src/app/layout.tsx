@@ -24,11 +24,11 @@ const dmSans = DM_Sans({
 })
 
 export const metadata: Metadata = {
-  title: { default: 'NT Beauty — Korean & Luxury Skincare in Kenya', template: '%s | NT Beauty' },
+  title: { default: 'NTK Beauty — Korean & Luxury Skincare in Kenya', template: '%s | NTK Beauty' },
   description: 'Shop premium Korean skincare, serums, sunscreens and beauty products in Kenya. Free advice, fast delivery, M-Pesa payments.',
   keywords: ['skincare Kenya', 'Korean skincare Nairobi', 'beauty products Kenya', 'sunscreen Kenya', 'serums Kenya'],
   openGraph: {
-    title: 'NT Beauty — Korean & Luxury Skincare in Kenya',
+    title: 'NTK Beauty — Korean & Luxury Skincare in Kenya',
     description: 'Premium skincare curated for Kenyan skin. K-Beauty, serums, SPF and more.',
     type: 'website',
   },

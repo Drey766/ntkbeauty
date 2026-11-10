@@ -5,6 +5,7 @@ import { useState } from 'react'
 import { useCart } from '@/context/CartContext'
 import { formatPrice, getShippingFee } from '@/lib/utils'
 import toast from 'react-hot-toast'
+import { LuShoppingBag } from 'react-icons/lu'
 
 export default function CartPage() {
   const { items, itemCount, subtotal, removeItem, updateQty, clearCart } = useCart()
@@ -18,7 +19,7 @@ export default function CartPage() {
     e.preventDefault()
     if (promoCode.toUpperCase() === 'GLOW10') {
       setPromoApplied(true)
-      toast.success('Promo applied — 10% off! 🎉')
+      toast.success('Promo applied — 10% off!')
     } else {
       toast.error('Invalid promo code')
     }
@@ -26,7 +27,7 @@ export default function CartPage() {
 
   if (items.length === 0) return (
     <div className="section-padding container-site text-center">
-      <div className="text-6xl mb-6">🛍️</div>
+      <LuShoppingBag className="w-16 h-16 mx-auto mb-6 text-brand-rose" aria-hidden />
       <h1 className="font-display text-3xl font-medium text-brand-dark mb-3">Your cart is empty</h1>
       <p className="text-brand-muted font-body mb-8">Start adding your favourite skincare products!</p>
       <Link href="/shop" className="btn-primary text-base px-8 py-4">Browse Products</Link>

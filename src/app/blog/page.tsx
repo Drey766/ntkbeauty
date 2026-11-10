@@ -28,7 +28,7 @@ export default function BlogPage() {
       <div className="container-site">
         <div className="text-center mb-12">
           <span className="section-tag mx-auto">Skincare Knowledge</span>
-          <h1 className="font-display text-4xl md:text-5xl font-medium text-brand-dark mb-3">The NT Beauty Blog</h1>
+          <h1 className="font-display text-4xl md:text-5xl font-medium text-brand-dark mb-3">The NTK Beauty Blog</h1>
           <p className="text-brand-muted font-body max-w-md mx-auto">Expert skincare advice, ingredient breakdowns, and routine guides — tailored for Kenyan skin.</p>
         </div>
 

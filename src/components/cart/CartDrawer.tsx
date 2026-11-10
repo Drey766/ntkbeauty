@@ -4,6 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { useCart } from '@/context/CartContext'
 import { formatPrice } from '@/lib/utils'
+import { LuShoppingBag } from 'react-icons/lu'
 
 interface Props { open: boolean; onClose: () => void }
 
@@ -41,7 +42,7 @@ export default function CartDrawer({ open, onClose }: Props) {
         <div className="flex-1 overflow-y-auto p-5 space-y-4">
           {items.length === 0 ? (
             <div className="flex flex-col items-center justify-center h-full text-center gap-4 py-16">
-              <div className="text-5xl">🛍️</div>
+              <LuShoppingBag className="w-14 h-14 text-brand-rose" aria-hidden />
               <div>
                 <p className="font-display text-xl text-brand-dark mb-1">Your cart is empty</p>
                 <p className="text-sm text-brand-muted font-body">Add some skincare goodness!</p>

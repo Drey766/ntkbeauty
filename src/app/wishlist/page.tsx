@@ -4,6 +4,7 @@ import { useWishlist } from '@/context/WishlistContext'
 import { useCart } from '@/context/CartContext'
 import ProductCard from '@/components/shop/ProductCard'
 import toast from 'react-hot-toast'
+import { LuHeart } from 'react-icons/lu'
 
 export default function WishlistPage() {
   const { items, clearWishlist } = useWishlist()
@@ -11,7 +12,7 @@ export default function WishlistPage() {
 
   function addAllToCart() {
     items.forEach(p => addItem(p))
-    toast.success(`${items.length} items added to cart ✓`)
+    toast.success(`${items.length} items added to cart`)
   }
 
   return (
@@ -32,7 +33,7 @@ export default function WishlistPage() {
 
         {items.length === 0 ? (
           <div className="text-center py-20">
-            <div className="text-6xl mb-5">❤️</div>
+            <LuHeart className="w-16 h-16 mx-auto mb-5 text-brand-rose" aria-hidden />
             <h2 className="font-display text-2xl text-brand-dark mb-3">Your wishlist is empty</h2>
             <p className="text-brand-muted font-body text-sm mb-8">Save products you love by clicking the heart icon</p>
             <Link href="/shop" className="btn-primary">Browse Products</Link>

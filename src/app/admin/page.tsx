@@ -7,6 +7,8 @@ import { Product, Order, BlogPost } from '@/types'
 import { formatPrice, PRODUCT_CATEGORIES } from '@/lib/utils'
 import toast from 'react-hot-toast'
 import Image from 'next/image'
+import type { IconType } from 'react-icons'
+import { LuLayoutDashboard, LuPackage, LuReceipt, LuPenLine, LuUsers, LuWallet, LuFolderUp, LuLink, LuCircleCheck, LuCirclePause } from 'react-icons/lu'
 
 type AdminTab = 'dashboard' | 'products' | 'orders' | 'blog' | 'customers'
 
@@ -146,12 +148,12 @@ export default function AdminPage() {
   if (loading) return <div className="section-padding container-site text-center text-brand-muted font-body">Loading…</div>
   if (!isAdmin) return null
 
-  const TABS: { key: AdminTab; label: string; icon: string }[] = [
-    { key: 'dashboard', label: 'Dashboard', icon: '📊' },
-    { key: 'products', label: 'Products', icon: '📦' },
-    { key: 'orders', label: 'Orders', icon: '🧾' },
-    { key: 'blog', label: 'Blog', icon: '✍️' },
-    { key: 'customers', label: 'Customers', icon: '👥' },
+  const TABS: { key: AdminTab; label: string; icon: IconType }[] = [
+    { key: 'dashboard', label: 'Dashboard', icon: LuLayoutDashboard },
+    { key: 'products', label: 'Products', icon: LuPackage },
+    { key: 'orders', label: 'Orders', icon: LuReceipt },
+    { key: 'blog', label: 'Blog', icon: LuPenLine },
+    { key: 'customers', label: 'Customers', icon: LuUsers },
   ]
 
   return (
@@ -159,7 +161,7 @@ export default function AdminPage() {
       <div className="container-site py-8">
         <div className="flex items-center justify-between mb-6">
           <h1 className="font-display text-3xl font-medium text-brand-dark">Admin Dashboard</h1>
-          <span className="badge-new px-3 py-1 text-xs">NT Beauty Admin</span>
+          <span className="badge-new px-3 py-1 text-xs">NTK Beauty Admin</span>
         </div>
 
         {/* Tabs */}
@@ -167,7 +169,7 @@ export default function AdminPage() {
           {TABS.map(t => (
             <button key={t.key} onClick={() => setTab(t.key)}
               className={`flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-body font-medium transition-all whitespace-nowrap ${tab === t.key ? 'bg-brand-rose text-white shadow-sm' : 'text-brand-muted hover:text-brand-dark'}`}>
-              <span>{t.icon}</span> {t.label}
+              <t.icon className="w-4 h-4" aria-hidden /> {t.label}
             </button>
           ))}
         </div>
@@ -177,13 +179,13 @@ export default function AdminPage() {
           <div className="space-y-6">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {[
-                { label: 'Products', value: stats.products, icon: '📦', color: 'bg-brand-rose/10 text-brand-rose' },
-                { label: 'Orders', value: stats.orders, icon: '🧾', color: 'bg-brand-green/10 text-brand-green' },
-                { label: 'Revenue', value: formatPrice(stats.revenue), icon: '💰', color: 'bg-amber-50 text-amber-700' },
-                { label: 'Customers', value: stats.customers, icon: '👥', color: 'bg-blue-50 text-blue-700' },
+                { label: 'Products', value: stats.products, icon: LuPackage, color: 'bg-brand-rose/10 text-brand-rose' },
+                { label: 'Orders', value: stats.orders, icon: LuReceipt, color: 'bg-brand-green/10 text-brand-green' },
+                { label: 'Revenue', value: formatPrice(stats.revenue), icon: LuWallet, color: 'bg-amber-50 text-amber-700' },
+                { label: 'Customers', value: stats.customers, icon: LuUsers, color: 'bg-blue-50 text-blue-700' },
               ].map(s => (
                 <div key={s.label} className="card p-5">
-                  <div className={`w-10 h-10 rounded-xl flex items-center justify-center text-lg mb-3 ${s.color}`}>{s.icon}</div>
+                  <div className={`w-10 h-10 rounded-xl flex items-center justify-center text-lg mb-3 ${s.color}`}><s.icon className="w-5 h-5" aria-hidden /></div>
                   <p className="font-display text-2xl font-semibold text-brand-dark">{s.value}</p>
                   <p className="text-xs text-brand-muted font-body mt-0.5">{s.label}</p>
                 </div>
@@ -206,7 +208,7 @@ export default function AdminPage() {
                 <h3 className="font-body font-semibold text-brand-dark mb-3">Quick Actions</h3>
                 <div className="space-y-2">
                   <button onClick={() => { setTab('products'); setEditingProduct(blankProduct()) }} className="w-full btn-primary justify-center py-2.5 text-sm">+ Add New Product</button>
-                  <button onClick={() => { setTab('blog'); setEditingPost({ title: '', excerpt: '', content: '', category: 'Skincare Basics', author_name: 'NT Beauty Team', published: true, read_time: 5, cover_image: '' }) }} className="w-full btn-outline justify-center py-2.5 text-sm">+ Write Blog Post</button>
+                  <button onClick={() => { setTab('blog'); setEditingPost({ title: '', excerpt: '', content: '', category: 'Skincare Basics', author_name: 'NTK Beauty Team', published: true, read_time: 5, cover_image: '' }) }} className="w-full btn-outline justify-center py-2.5 text-sm">+ Write Blog Post</button>
                 </div>
               </div>
             </div>
@@ -275,11 +277,11 @@ export default function AdminPage() {
                         <div className="flex gap-2">
                           <button onClick={() => fileInputRef.current?.click()} disabled={uploadingImage}
                             className="w-20 h-20 border-2 border-dashed border-brand-beige rounded-xl flex flex-col items-center justify-center text-brand-muted hover:border-brand-rose hover:text-brand-rose transition-colors text-xs gap-1">
-                            {uploadingImage ? '…' : (<><span className="text-xl">📁</span><span>Upload</span></>)}
+                            {uploadingImage ? '…' : (<><LuFolderUp className="w-5 h-5" aria-hidden /><span>Upload</span></>)}
                           </button>
                           <button onClick={addImageUrl}
                             className="w-20 h-20 border-2 border-dashed border-brand-beige rounded-xl flex flex-col items-center justify-center text-brand-muted hover:border-brand-rose hover:text-brand-rose transition-colors text-xs gap-1">
-                            <span className="text-xl">🔗</span><span>URL</span>
+                            <LuLink className="w-5 h-5" aria-hidden /><span>URL</span>
                           </button>
                         </div>
                       )}
@@ -416,7 +418,7 @@ export default function AdminPage() {
           <div>
             <div className="flex justify-between items-center mb-5">
               <p className="text-sm text-brand-muted font-body">{posts.length} posts</p>
-              <button onClick={() => setEditingPost({ title: '', excerpt: '', content: '', category: 'Skincare Basics', author_name: 'NT Beauty Team', published: true, read_time: 5, cover_image: '', slug: '' })} className="btn-primary">+ New Post</button>
+              <button onClick={() => setEditingPost({ title: '', excerpt: '', content: '', category: 'Skincare Basics', author_name: 'NTK Beauty Team', published: true, read_time: 5, cover_image: '', slug: '' })} className="btn-primary">+ New Post</button>
             </div>
 
             {editingPost && (
@@ -475,7 +477,9 @@ export default function AdminPage() {
                   </div>
                   <div className="flex-1 min-w-0">
                     <p className="font-body font-medium text-brand-dark line-clamp-1">{p.title}</p>
-                    <p className="text-xs text-brand-muted font-body">{p.category} · {p.read_time} min read · {p.published ? '✅ Published' : '⏸ Draft'}</p>
+                    <p className="text-xs text-brand-muted font-body">{p.category} · {p.read_time} min read · {p.published
+                      ? <span className="inline-flex items-center gap-1 text-brand-green"><LuCircleCheck className="w-3.5 h-3.5" aria-hidden /> Published</span>
+                      : <span className="inline-flex items-center gap-1"><LuCirclePause className="w-3.5 h-3.5" aria-hidden /> Draft</span>}</p>
                   </div>
                   <div className="flex gap-2">
                     <button onClick={() => setEditingPost(p)} className="text-xs text-brand-rose font-body hover:text-brand-rose-dark transition-colors">Edit</button>

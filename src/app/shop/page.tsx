@@ -7,6 +7,7 @@ import { getSupabase } from '@/lib/supabase'
 import { Product } from '@/types'
 import ProductCard from '@/components/shop/ProductCard'
 import { PRODUCT_CATEGORIES, SKIN_CONCERNS } from '@/lib/utils'
+import { LuSearch } from 'react-icons/lu'
 
 function ShopSkeleton() {
   return (
@@ -266,7 +267,7 @@ function ShopContent() {
                         : 'text-brand-dark hover:bg-brand-cream'
                     }`}
                   >
-                    {cat.emoji}{' '}
+                    <cat.icon className="inline-block w-4 h-4 mr-1.5 -mt-0.5" aria-hidden />
                     {cat.label}
                   </button>
                 )
@@ -299,7 +300,7 @@ function ShopContent() {
                         : 'text-brand-dark hover:bg-brand-cream'
                     }`}
                   >
-                    {c.icon}{' '}
+                    <c.icon className="inline-block w-4 h-4 mr-1.5 -mt-0.5" aria-hidden />
                     {c.label}
                   </button>
                 )
@@ -436,9 +437,7 @@ function ShopContent() {
           <ShopSkeleton />
         ) : products.length === 0 ? (
           <div className="text-center py-20">
-            <p className="text-5xl mb-4">
-              🔍
-            </p>
+            <LuSearch className="w-12 h-12 mx-auto mb-4 text-brand-muted" aria-hidden />
 
             <p className="font-display text-2xl text-brand-dark mb-2">
               No products found

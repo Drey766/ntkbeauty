@@ -39,8 +39,8 @@ async function initiateStkPush(phone: string, amount: number, orderId: string): 
         PartyB: process.env.MPESA_BUSINESS_SHORT_CODE,
         PhoneNumber: normalizePhone(phone),
         CallBackURL: process.env.MPESA_CALLBACK_URL,
-        AccountReference: `NTBEAUTY-${orderId.slice(0, 8).toUpperCase()}`,
-        TransactionDesc: 'NT Beauty Order Payment',
+        AccountReference: `NTKBEAUTY-${orderId.slice(0, 8).toUpperCase()}`,
+        TransactionDesc: 'NTK Beauty Order Payment',
       })
     })
     return await res.json()
@@ -55,7 +55,7 @@ async function notifyOwner(order: Record<string, unknown>) {
     const addr = order.shipping_address as Record<string, string>
     const items = order.items as Array<{ product: { name: string }; quantity: number; }>
     const message = [
-      `🛍️ *New Order — NT Beauty*`,
+      `🛍️ *New Order — NTK Beauty*`,
       `Order ID: ${(order.id as string)?.slice(0, 8)}`,
       `Customer: ${addr.full_name} (${addr.phone})`,
       `County: ${addr.county}, ${addr.town}`,

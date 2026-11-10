@@ -7,6 +7,7 @@ import { useAuth } from '@/context/AuthContext'
 import CartDrawer from '@/components/cart/CartDrawer'
 import AuthModal from '@/components/ui/AuthModal'
 import { PRODUCT_CATEGORIES } from '@/lib/utils'
+import { LuFlower2 } from 'react-icons/lu'
 
 export default function Navbar() {
   const { itemCount } = useCart()
@@ -29,14 +30,14 @@ export default function Navbar() {
       <header className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${scrolled ? 'bg-brand-white/95 backdrop-blur-md shadow-card' : 'bg-brand-white'}`}>
         {/* Announcement bar */}
         <div className="bg-brand-dark text-white text-xs text-center py-2 px-4 font-body tracking-wide">
-          🌸 Free delivery on orders over KShs 5,000 &nbsp;|&nbsp; Pay with M-Pesa &nbsp;|&nbsp; <a href="https://wa.me/254700000000" className="underline hover:text-brand-rose transition-colors">WhatsApp us for skin advice</a>
+          <LuFlower2 className="inline-block w-3.5 h-3.5 mr-1 -mt-0.5" aria-hidden /> Free delivery on orders over KShs 5,000 &nbsp;|&nbsp; Pay with M-Pesa &nbsp;|&nbsp; <a href="https://wa.me/254700000000" className="underline hover:text-brand-rose transition-colors">WhatsApp us for skin advice</a>
         </div>
 
         <div className="container-site">
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <Link href="/" className="font-display text-2xl font-semibold text-brand-dark tracking-wide hover:text-brand-rose transition-colors">
-              NT <span className="text-brand-rose">Beauty</span>
+              NTK <span className="text-brand-rose">Beauty</span>
             </Link>
 
             {/* Desktop nav */}
@@ -52,7 +53,7 @@ export default function Navbar() {
                     {PRODUCT_CATEGORIES.map(cat => (
                       <Link key={cat.slug} href={`/shop?category=${cat.slug}`}
                         className="flex flex-col items-center text-center p-2 rounded-xl hover:bg-brand-cream transition-colors group/item">
-                        <span className="text-xl mb-1">{cat.emoji}</span>
+                        <cat.icon className="w-5 h-5 mb-1 text-brand-rose" aria-hidden />
                         <span className="text-[11px] font-body text-brand-dark group-hover/item:text-brand-rose transition-colors leading-tight">{cat.label}</span>
                       </Link>
                     ))}

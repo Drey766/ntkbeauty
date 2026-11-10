@@ -1,4 +1,4 @@
-# NT Beauty Kenya — Full Stack E-Commerce
+# NTK Beauty Kenya — Full Stack E-Commerce
 
 Premium Korean skincare and beauty products for the Kenyan market. Built with Next.js 14, Supabase, M-Pesa Daraja API, and WhatsApp Business Cloud API.
 

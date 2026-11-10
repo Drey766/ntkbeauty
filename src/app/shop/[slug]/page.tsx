@@ -64,7 +64,7 @@ export default function ProductDetailPage() {
 
   function handleAddToCart() {
     addItem(product!, qty)
-    toast.success(`${qty}× ${product!.name.slice(0, 25)}… added to cart ✓`)
+    toast.success(`${qty}× ${product!.name.slice(0, 25)}… added to cart`)
   }
 
   return (
@@ -159,7 +159,7 @@ export default function ProductDetailPage() {
               <button onClick={handleAddToCart} className="btn-primary flex-1 py-3.5 text-base justify-center">
                 Add to Cart · {formatPrice(product.price * qty)}
               </button>
-              <button onClick={() => { toggleItem(product); toast.success(inWishlist ? 'Removed from wishlist' : '❤️ Saved to wishlist') }}
+              <button onClick={() => { toggleItem(product); toast.success(inWishlist ? 'Removed from wishlist' : 'Saved to wishlist') }}
                 className={`w-12 h-12 rounded-full border-2 flex items-center justify-center transition-all ${inWishlist ? 'bg-brand-rose border-brand-rose text-white' : 'border-brand-beige text-brand-muted hover:border-brand-rose hover:text-brand-rose'}`}>
                 <svg className="w-5 h-5" fill={inWishlist ? 'currentColor' : 'none'} stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />

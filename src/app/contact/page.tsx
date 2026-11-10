@@ -1,6 +1,7 @@
 'use client'
 import { useState } from 'react'
 import toast from 'react-hot-toast'
+import { LuMapPin, LuClock, LuMail } from 'react-icons/lu'
 
 const FAQS = [
   { q: 'Do you deliver nationwide in Kenya?', a: 'Yes! We deliver to all 47 counties. Nairobi gets same-day/next-day delivery. Upcountry takes 2–4 business days via courier.' },
@@ -42,12 +43,12 @@ export default function ContactPage() {
               <h2 className="font-display text-xl font-medium text-brand-dark mb-4">Store Information</h2>
               <ul className="space-y-4 font-body text-sm">
                 {[
-                  { icon: '📍', label: 'Location', value: 'Nairobi, Kenya (Online Store)' },
-                  { icon: '🕐', label: 'Hours', value: 'Mon – Sat: 9:00 AM – 6:00 PM EAT' },
-                  { icon: '📧', label: 'Email', value: 'hello@ntbeauty.co.ke' },
+                  { icon: LuMapPin, label: 'Location', value: 'Nairobi, Kenya (Online Store)' },
+                  { icon: LuClock, label: 'Hours', value: 'Mon – Sat: 9:00 AM – 6:00 PM EAT' },
+                  { icon: LuMail, label: 'Email', value: 'hello@ntkbeauty.co.ke' },
                 ].map(item => (
                   <li key={item.label} className="flex items-start gap-3">
-                    <span className="text-xl">{item.icon}</span>
+                    <item.icon className="w-5 h-5 mt-0.5 shrink-0 text-brand-rose" aria-hidden />
                     <div>
                       <p className="text-xs uppercase tracking-wider text-brand-muted font-semibold mb-0.5">{item.label}</p>
                       <p className="text-brand-dark">{item.value}</p>

@@ -1,6 +1,7 @@
 'use client'
 import Link from 'next/link'
 import Image from 'next/image'
+import { LuFlower2, LuCheck } from 'react-icons/lu'
 
 export default function HeroSection() {
   return (
@@ -22,7 +23,7 @@ export default function HeroSection() {
         <div className="max-w-xl">
           {/* Eyebrow */}
           <div className="inline-flex items-center gap-2 bg-brand-rose/10 border border-brand-rose/20 text-brand-rose text-xs font-body font-semibold uppercase tracking-widest px-4 py-1.5 rounded-full mb-6">
-            🌸 K-Beauty in Kenya
+            <LuFlower2 className="w-3.5 h-3.5" aria-hidden /> K-Beauty in Kenya
           </div>
 
           {/* Headline */}
@@ -56,10 +57,10 @@ export default function HeroSection() {
 
           {/* Trust signals */}
           <div className="flex flex-wrap items-center gap-6 mt-10 text-xs font-body text-brand-muted">
-            <span className="flex items-center gap-1.5"><span className="text-brand-green">✓</span> Genuine products</span>
-            <span className="flex items-center gap-1.5"><span className="text-brand-green">✓</span> M-Pesa accepted</span>
-            <span className="flex items-center gap-1.5"><span className="text-brand-green">✓</span> Nationwide delivery</span>
-            <span className="flex items-center gap-1.5"><span className="text-brand-green">✓</span> Free skin advice</span>
+            <span className="flex items-center gap-1.5"><LuCheck className="w-4 h-4 text-brand-green" aria-hidden /> Genuine products</span>
+            <span className="flex items-center gap-1.5"><LuCheck className="w-4 h-4 text-brand-green" aria-hidden /> M-Pesa accepted</span>
+            <span className="flex items-center gap-1.5"><LuCheck className="w-4 h-4 text-brand-green" aria-hidden /> Nationwide delivery</span>
+            <span className="flex items-center gap-1.5"><LuCheck className="w-4 h-4 text-brand-green" aria-hidden /> Free skin advice</span>
           </div>
         </div>
       </div>

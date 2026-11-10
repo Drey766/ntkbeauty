@@ -5,6 +5,7 @@ import Link from 'next/link'
 import toast from 'react-hot-toast'
 import { getSupabase } from '@/lib/supabase'
 import { PRODUCT_CATEGORIES } from '@/lib/utils'
+import { LuMapPin } from 'react-icons/lu'
 
 export default function Footer() {
   const [email, setEmail] = useState('')
@@ -18,7 +19,7 @@ export default function Footer() {
       const supabase = getSupabase()
       const { error } = await supabase.from('newsletter_subscribers').insert({ email })
       if (error && error.code !== '23505') throw error
-      toast.success('You\'re subscribed! ✨')
+      toast.success('You\'re subscribed!')
       setEmail('')
     } catch {
       toast.error('Something went wrong. Please try again.')
@@ -55,7 +56,7 @@ export default function Footer() {
       <div className="container-site py-14 grid grid-cols-2 md:grid-cols-4 gap-10">
         {/* Brand */}
         <div className="col-span-2 md:col-span-1">
-          <div className="font-display text-2xl font-semibold mb-3">NT <span className="text-brand-rose">Beauty</span></div>
+          <div className="font-display text-2xl font-semibold mb-3">NTK <span className="text-brand-rose">Beauty</span></div>
           <p className="text-white/60 text-sm font-body leading-relaxed mb-5">
             Kenya's home for Korean skincare and premium beauty. Curated for our climate, our skin tones, and our budget.
           </p>
@@ -101,9 +102,9 @@ export default function Footer() {
         <div>
           <h4 className="text-xs uppercase tracking-widest text-white/40 font-body font-semibold mb-4">Get in Touch</h4>
           <ul className="space-y-2.5 text-sm font-body text-white/70">
-            <li>📍 Nairobi, Kenya</li>
+            <li className="flex items-center gap-2"><LuMapPin className="w-4 h-4 shrink-0" aria-hidden /> Nairobi, Kenya</li>
             <li><a href="https://wa.me/254700000000" className="hover:text-white transition-colors">WhatsApp: +254 700 000 000</a></li>
-            <li><a href="mailto:hello@ntbeauty.co.ke" className="hover:text-white transition-colors">hello@ntbeauty.co.ke</a></li>
+            <li><a href="mailto:hello@ntkbeauty.co.ke" className="hover:text-white transition-colors">hello@ntkbeauty.co.ke</a></li>
             <li className="text-white/40 text-xs pt-2">Mon – Sat: 9am – 6pm EAT</li>
           </ul>
         </div>
@@ -112,7 +113,7 @@ export default function Footer() {
       {/* Bottom bar */}
       <div className="border-t border-white/10">
         <div className="container-site py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-white/40 text-xs font-body">© {new Date().getFullYear()} NT Beauty Kenya. All rights reserved.</p>
+          <p className="text-white/40 text-xs font-body">© {new Date().getFullYear()} NTK Beauty Kenya. All rights reserved.</p>
           <div className="flex items-center gap-4 text-xs font-body text-white/40">
             <span>M-Pesa accepted</span>
             <span>•</span>

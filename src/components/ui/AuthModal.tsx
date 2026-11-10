@@ -21,7 +21,7 @@ export default function AuthModal({ open, onClose }: Props) {
     if (tab === 'signin') {
       const { error } = await signIn(email, password)
       if (error) { toast.error(error); setLoading(false); return }
-      toast.success('Welcome back! ✨')
+      toast.success('Welcome back!')
       onClose()
     } else {
       const { error } = await signUp(email, password, fullName)
@@ -42,7 +42,7 @@ export default function AuthModal({ open, onClose }: Props) {
               {tab === 'signin' ? 'Welcome back' : 'Create account'}
             </h2>
             <p className="text-sm text-brand-muted font-body mt-1">
-              {tab === 'signin' ? 'Sign in to your NT Beauty account' : 'Join the Glow Club today'}
+              {tab === 'signin' ? 'Sign in to your NTK Beauty account' : 'Join the Glow Club today'}
             </p>
           </div>
 

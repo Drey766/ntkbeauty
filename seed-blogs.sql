@@ -1,4 +1,4 @@
--- seed-blogs.sql — 8 original blog articles for NT Beauty Kenya
+-- seed-blogs.sql — 8 original blog articles for NTK Beauty Kenya
 INSERT INTO public.blog_posts (title, slug, excerpt, content, cover_image, category, author_name, published, read_time)
 VALUES
 
@@ -19,7 +19,7 @@ VALUES
 <p>At Nairobi''s altitude, UV index regularly hits 8 or above — that''s "very high" on the WHO scale. SPF 30 is the absolute minimum; SPF 50 is strongly recommended. Apply it as the last step in your morning routine, every day, rain or shine. A surprising amount of UV penetrates cloud cover.</p>
 <p>The good news: Nairobi''s climate is relatively stable year-round, which means once you build a routine that works, you shouldn''t need to dramatically change it with the seasons. Start simple, be consistent, and give any new product at least four weeks before judging whether it works.</p>',
 'https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=800&q=80',
-'Skincare Basics', 'NT Beauty Team', true, 5),
+'Skincare Basics', 'NTK Beauty Team', true, 5),
 
 ('Niacinamide vs Vitamin C — Which One Does Your Skin Actually Need?',
 'niacinamide-vs-vitamin-c-which-one',
@@ -35,14 +35,14 @@ VALUES
 <p>Yes — and the old advice that they ''cancel each other out'' has been debunked. You can layer them (niacinamide first, vitamin C second on the same day) or use one in the morning and one at night. Many people find this combination delivers faster brightening results than either alone.</p>
 <p>If your main concerns are oily skin, pores, and PIH from spots: start with niacinamide. If your main concern is overall dullness, UV damage, and antiageing: prioritise vitamin C. When in doubt, chat to us on WhatsApp — we''ll help you pick the right product for your budget and skin type.</p>',
 'https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=800&q=80',
-'Ingredients', 'NT Beauty Team', true, 6),
+'Ingredients', 'NTK Beauty Team', true, 6),
 
 ('How to Build a Skincare Routine from Scratch on a Kenyan Budget',
 'skincare-routine-kenyan-budget',
 'Great skin doesn''t require a 12-step routine or imported luxury brands. Here''s how to start smart, spend wisely, and actually see results.',
 '<p>The skincare industry wants you to believe you need dozens of products to have good skin. You don''t. Especially when you''re starting out, the most impactful routine is a simple, consistent one. Here''s how to build it affordably in Kenya.</p>
 <h2>The Non-Negotiables (Start Here)</h2>
-<p>Three products will get you further than any 10-step routine if you use them consistently every day: a cleanser, a moisturiser, and SPF. That''s it for the foundation. In Kenya, you can build this entire base routine for under KShs 3,000 using proven Korean skincare brands like COSRX, Some By Mi, or Anua — which are available right here at NT Beauty.</p>
+<p>Three products will get you further than any 10-step routine if you use them consistently every day: a cleanser, a moisturiser, and SPF. That''s it for the foundation. In Kenya, you can build this entire base routine for under KShs 3,000 using proven Korean skincare brands like COSRX, Some By Mi, or Anua — which are available right here at NTK Beauty.</p>
 <h2>Choosing a Cleanser</h2>
 <p>For oily or combination skin (very common in Nairobi), a gentle foaming gel cleanser works well. For dry or sensitive skin, a cream or milk cleanser is more nourishing. Spend between KShs 800 and KShs 1,800. Avoid anything that leaves your skin feeling tight — that''s a sign the pH is too high and your skin barrier is being disrupted.</p>
 <h2>Choosing a Moisturiser</h2>
@@ -53,7 +53,7 @@ VALUES
 <p>After 4 to 6 weeks of consistent cleansing, moisturising, and SPF use, your skin will have stabilised. This is when you can introduce one targeted treatment — typically a serum. Choose based on your biggest concern: niacinamide for spots and pores, hyaluronic acid for dehydration, or a vitamin C serum for dullness.</p>
 <p>Remember: skincare is a marathon, not a sprint. Consistent use of a simple routine will always outperform an inconsistent, complicated one.</p>',
 'https://images.unsplash.com/photo-1556228720-195a672e8a03?w=800&q=80',
-'Skincare Basics', 'NT Beauty Team', true, 5),
+'Skincare Basics', 'NTK Beauty Team', true, 5),
 
 ('The Truth About Skin Bleaching in Kenya — and What to Use Instead',
 'skin-bleaching-kenya-alternatives',
@@ -75,7 +75,7 @@ VALUES
 <p>No brightening ingredient works without SPF. UV exposure is the primary trigger for melanin production — without daily sun protection, dark spots will keep forming faster than any treatment can fade them. This is non-negotiable, especially in Kenya''s high-UV environment.</p>
 <p>Your skin tone is beautiful as it is. The goal of ethical skincare is healthy, even, glowing skin — not a different shade of skin entirely.</p>',
 'https://images.unsplash.com/photo-1611080626919-7cf5a9dbab12?w=800&q=80',
-'Skin Concerns', 'NT Beauty Team', true, 6),
+'Skin Concerns', 'NTK Beauty Team', true, 6),
 
 ('Korean Skincare (K-Beauty) Explained for Beginners',
 'korean-skincare-k-beauty-beginners-guide',
@@ -91,7 +91,7 @@ VALUES
 <h2>Where to Start</h2>
 <p>You don''t need to buy everything at once. A great K-beauty starter kit for a Kenyan beginner would be: the COSRX Low pH Good Morning Gel Cleanser, a hydrating toner like the Some By Mi Galactomyces Pure Vitamin C Glow Toner, and a moisturising sunscreen like the Beauty of Joseon Relief Sun. This covers your three non-negotiables — clean, hydrate, protect — in one beautifully thought-out routine.</p>',
 'https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=800&q=80',
-'K-Beauty', 'NT Beauty Team', true, 5),
+'K-Beauty', 'NTK Beauty Team', true, 5),
 
 ('SPF in Kenya — Why Sunscreen Isn''t Optional and How to Choose One',
 'spf-sunscreen-kenya-guide',
@@ -107,7 +107,7 @@ VALUES
 <p>Apply SPF as the last step in your morning routine, after moisturiser. Use a generous amount — about a third of a teaspoon for the face alone. Reapply every two hours if you''re spending time outdoors. No, your makeup''s SPF is not sufficient on its own — the amount you''d need to apply for adequate protection would be far more than anyone applies makeup.</p>
 <p>SPF is the single most evidence-backed anti-ageing and skin health investment you can make. Make it a daily habit — like brushing your teeth.</p>',
 'https://images.unsplash.com/photo-1533643767029-0a5d02c5041f?w=800&q=80',
-'SPF & Sun Care', 'NT Beauty Team', true, 6),
+'SPF & Sun Care', 'NTK Beauty Team', true, 6),
 
 ('How to Treat Hyperpigmentation and Dark Spots the Right Way',
 'treat-hyperpigmentation-dark-spots-kenya',
@@ -127,7 +127,7 @@ VALUES
 <h2>What to Avoid</h2>
 <p>Avoid harsh scrubs and high-percentage acids that cause irritation — in darker skin, any inflammation can trigger more pigmentation, worsening the problem. Avoid unregulated bleaching products, as discussed in our earlier article. And never use any brightening active without SPF — you will undo your progress with every hour of unprotected sun exposure.</p>',
 'https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=800&q=80',
-'Skin Concerns', 'NT Beauty Team', true, 6),
+'Skin Concerns', 'NTK Beauty Team', true, 6),
 
 ('The Best Ingredients for Acne-Prone Skin — and What to Avoid',
 'best-ingredients-acne-prone-skin',
@@ -144,6 +144,6 @@ VALUES
 <h2>The Routine That Works</h2>
 <p>Keep it simple: a gentle, low-pH cleanser morning and night, a niacinamide serum daily, salicylic acid two to three evenings a week, a lightweight non-comedogenic moisturiser, and SPF every morning. That''s a complete, effective, affordable acne routine — no 15 products required.</p>',
 'https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?w=800&q=80',
-'Skin Concerns', 'NT Beauty Team', true, 6)
+'Skin Concerns', 'NTK Beauty Team', true, 6)
 
 ON CONFLICT (slug) DO NOTHING;

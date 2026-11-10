@@ -1,4 +1,4 @@
--- NT Beauty Kenya — Supabase Database Schema
+-- NTK Beauty Kenya — Supabase Database Schema
 -- Run this in your Supabase SQL Editor before seeding data
 
 -- ── Enable extensions ─────────────────────────────────────────────────────────
@@ -88,7 +88,7 @@ create table if not exists public.blog_posts (
   content     text default '',
   cover_image text default '',
   category    text default 'Skincare Basics',
-  author_name text default 'NT Beauty Team',
+  author_name text default 'NTK Beauty Team',
   published   boolean default false,
   read_time   integer default 5,
   created_at  timestamptz default now()
