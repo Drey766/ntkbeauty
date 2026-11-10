@@ -74,7 +74,7 @@ VALUES
 <h2>The Role of SPF</h2>
 <p>No brightening ingredient works without SPF. UV exposure is the primary trigger for melanin production — without daily sun protection, dark spots will keep forming faster than any treatment can fade them. This is non-negotiable, especially in Kenya''s high-UV environment.</p>
 <p>Your skin tone is beautiful as it is. The goal of ethical skincare is healthy, even, glowing skin — not a different shade of skin entirely.</p>',
-'https://images.unsplash.com/photo-1611080626919-7cf5a9dbab12?w=800&q=80',
+'https://images.pexels.com/photos/9774609/pexels-photo-9774609.jpeg?auto=compress&cs=tinysrgb&w=800',
 'Skin Concerns', 'NTK Beauty Team', true, 6),
 
 ('Korean Skincare (K-Beauty) Explained for Beginners',
@@ -106,7 +106,7 @@ VALUES
 <h2>How to Use It Correctly</h2>
 <p>Apply SPF as the last step in your morning routine, after moisturiser. Use a generous amount — about a third of a teaspoon for the face alone. Reapply every two hours if you''re spending time outdoors. No, your makeup''s SPF is not sufficient on its own — the amount you''d need to apply for adequate protection would be far more than anyone applies makeup.</p>
 <p>SPF is the single most evidence-backed anti-ageing and skin health investment you can make. Make it a daily habit — like brushing your teeth.</p>',
-'https://images.unsplash.com/photo-1533643767029-0a5d02c5041f?w=800&q=80',
+'https://images.pexels.com/photos/16378485/pexels-photo-16378485.jpeg?auto=compress&cs=tinysrgb&w=800',
 'SPF & Sun Care', 'NTK Beauty Team', true, 6),
 
 ('How to Treat Hyperpigmentation and Dark Spots the Right Way',

@@ -27,8 +27,8 @@ export function MarqueeBar() {
 const CAT_IMAGES: Record<string, string> = {
   cleansers: 'https://images.unsplash.com/photo-1556228720-195a672e8a03?w=400&q=80',
   serums: 'https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=400&q=80',
-  moisturizers: 'https://images.unsplash.com/photo-1611080626919-7cf5a9dbab12?w=400&q=80',
-  sunscreen: 'https://images.unsplash.com/photo-1533643767029-0a5d02c5041f?w=400&q=80',
+  moisturizers: 'https://images.pexels.com/photos/9774609/pexels-photo-9774609.jpeg?auto=compress&cs=tinysrgb&w=400',
+  sunscreen: 'https://images.pexels.com/photos/16378485/pexels-photo-16378485.jpeg?auto=compress&cs=tinysrgb&w=400',
   toners: 'https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=400&q=80',
   masks: 'https://images.unsplash.com/photo-1596755389378-c31d21fd1273?w=400&q=80',
   eyecare: 'https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=400&q=80',
@@ -185,7 +185,7 @@ export function InstagramFeed() {
     'https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=300&q=80',
     'https://images.unsplash.com/photo-1556228720-195a672e8a03?w=300&q=80',
     'https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=300&q=80',
-    'https://images.unsplash.com/photo-1611080626919-7cf5a9dbab12?w=300&q=80',
+    'https://images.pexels.com/photos/9774609/pexels-photo-9774609.jpeg?auto=compress&cs=tinysrgb&w=300',
     'https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=300&q=80',
   ]
   return (
